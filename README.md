@@ -12,6 +12,9 @@ Database module, used by docker
 ## Setup
 Setup for project for [IntelliJ](doc/SETUP.md)
 
+### Docker
+Setup for [Docker](doc/DOCKER.md)
+
 ## Requirements
 `openjdk-11`
 

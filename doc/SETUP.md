@@ -28,5 +28,6 @@ Imported modules should be recognized by Intellij as modules
 
 ### Running the tests from IntelliJ
 If you would like to run test by platform instead of gradle select `Build / Execution / Deployment` in preferences
+Setup SDK: JDK 16
 
 ![runner](img/runner.png)
