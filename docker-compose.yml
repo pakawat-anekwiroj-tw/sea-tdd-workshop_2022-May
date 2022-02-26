@@ -11,7 +11,9 @@ services:
     build:
       context: ./loan/loan-server
     ports:
-    - "8010:8080"
+    - "8080:8080"
     command: java -jar loan.jar
     environment:
     - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres-lah:5432/loans
+    depends_on:
+      - db

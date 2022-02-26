@@ -15,6 +15,8 @@ class LoanControllerAcceptanceTest {
   void shouldRequestNewLoanAndSeeAmountAndInterestRate() {
     var response =
             given().
+                    baseUri("http://docker.local").
+                    port(8080).
                     contentType(JSON).
                     body("{\"amount\": 200, \"durationInDays\": 365}").
                     when().
@@ -28,6 +30,8 @@ class LoanControllerAcceptanceTest {
     String newLoanUrl = response.body().jsonPath(jsonPathConfig()).getString("location.url");
 
     given().
+            baseUri("http://docker.local").
+            port(8080).
             when().
             get(newLoanUrl).
             then().
